@@ -4,9 +4,9 @@ GitHub上の `.html` / `.htm` ファイルを、CSSと画像つきで読むた�
 
 ## デモ
 
-![GitHub上のHTMLファイルでHTML Previewボタンを押すと、CSSと画像が適用されたプレビューが開く様子](../docs/demo.gif)
+![GitHub上のHTMLファイルでHTML Previewボタンを押すと、CSSと画像が適用されたプレビューが開く様子](docs/demo.gif)
 
-実際に試せるサンプルを [`demo/`](../demo/) に置いてあります。GitHub上で [`demo/index.html`](../demo/index.html) を開き、右下の **HTML Preview** を押すと、CSSの読み込み・`@import`の展開・画像の表示・JavaScriptが実行されないことを一度に確認できます。
+実際に試せるサンプルを [`demo/`](demo/) に置いてあります。GitHub上で [`demo/index.html`](demo/index.html) を開き、右下の **HTML Preview** を押すと、CSSの読み込み・`@import`の展開・画像の表示・JavaScriptが実行されないことを一度に確認できます。
 
 ## 類似の拡張機能との違い
 
@@ -25,7 +25,7 @@ JavaScriptを動かしてプレビューしたい場合や、外部CDNのCSSを�
 2. Chromeのアドレス欄に `chrome://extensions` と入力します。
 3. 右上の「デベロッパー モード」をオンにします。
 4. 「パッケージ化されていない拡張機能を読み込む」を押します。
-5. このREADMEと `manifest.json` が入った `github-html-preview` フォルダを選びます。
+5. `manifest.json` が入ったフォルダ（clone・展開したリポジトリのルート）を選びます。
 6. 開いていたGitHubのページを再読み込みします。
 
 ZIPファイル自体ではなく、展開したフォルダを選んでください。インストール後もそのフォルダは保存しておいてください。
@@ -70,7 +70,7 @@ ChromeのGitHubログインを利用してRawファイルの取得を試みま�
 
 ## 検証状況
 
-Chromeに読み込み、[`demo/`](../demo/) のサンプルで描画を確認しています。相対パスの外部CSS、`@import` の展開、CSS `url()` の背景画像、`<img>` の相対パス、インライン `style` 属性、日本語ファイル名、HTML内のJavaScriptが実行されないことを確認ずみです。
+Chromeに読み込み、[`demo/`](demo/) のサンプルで描画を確認しています。相対パスの外部CSS、`@import` の展開、CSS `url()` の背景画像、`<img>` の相対パス、インライン `style` 属性、日本語ファイル名、HTML内のJavaScriptが実行されないことを確認ずみです。
 
 非公開リポジトリでの取得は未検証です。
 
@@ -90,4 +90,4 @@ Chromeに読み込み、[`demo/`](../demo/) のサンプルで描画を確認し
 
 ## ライセンス
 
-MIT License. 詳細は [LICENSE](../LICENSE) を参照してください。
+MIT License. 詳細は [LICENSE](LICENSE) を参照してください。
