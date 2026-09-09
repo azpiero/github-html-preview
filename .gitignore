@@ -2,3 +2,4 @@
 *.zip
 node_modules/
 docs/*.mov
+docs/demo-original.gif

@@ -4,6 +4,8 @@ GitHub上の `.html` / `.htm` ファイルを、CSSと画像つきで読むた�
 
 ## デモ
 
+![GitHub上のHTMLファイルでHTML Previewボタンを押すと、CSSと画像が適用されたプレビューが開く様子](../docs/demo.gif)
+
 実際に試せるサンプルを [`demo/`](../demo/) に置いてあります。GitHub上で [`demo/index.html`](../demo/index.html) を開き、右下の **HTML Preview** を押すと、CSSの読み込み・`@import`の展開・画像の表示・JavaScriptが実行されないことを一度に確認できます。
 
 ## 類似の拡張機能との違い
