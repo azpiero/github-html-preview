@@ -3,8 +3,38 @@
   "name": "GitHub HTML Preview",
   "version": "1.0.0",
   "description": "GitHubのHTMLをCSS・画像つきでプレビュー。HTML内のJavaScriptは実行しません。",
-  "host_permissions": ["https://github.com/*", "https://raw.githubusercontent.com/*"],
-  "content_scripts": [{"matches": ["https://github.com/*"], "js": ["content.js"], "run_at": "document_idle"}],
-  "web_accessible_resources": [{"resources": ["viewer.html"], "matches": ["https://github.com/*"]}],
-  "content_security_policy": {"extension_pages": "script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; frame-src 'self'; connect-src https://github.com https://raw.githubusercontent.com"}
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "host_permissions": [
+    "https://github.com/*",
+    "https://raw.githubusercontent.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "viewer.html"
+      ],
+      "matches": [
+        "https://github.com/*"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; frame-src 'self'; connect-src https://github.com https://raw.githubusercontent.com"
+  }
 }

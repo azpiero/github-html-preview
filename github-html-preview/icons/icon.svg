@@ -1,0 +1,15 @@
+<!-- 拡張機能アイコンの原本。書き出し: rsvg-convert -w <size> -h <size> icon.svg -o icon<size>.png -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3fb950"/>
+      <stop offset="1" stop-color="#1a7f37"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g)"/>
+  <g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M44 38 L22 64 L44 90"/>
+    <path d="M84 38 L106 64 L84 90"/>
+  </g>
+  <circle cx="64" cy="64" r="9" fill="#fff"/>
+</svg>
