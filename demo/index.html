@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>動作確認用ドキュメント | GitHub HTML Preview</title>
+  <link rel="stylesheet" href="styles/theme.css">
+  <style>
+    /* HTML内に直接書いたCSS。外部CSSが読めなくてもこの枠線だけは残る。 */
+    .inline-probe { border: 2px dashed #8250df; border-radius: 8px; padding: 10px 14px; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <h1>GitHub HTML Preview 動作確認</h1>
+    <p>このページを GitHub 上で開き、右下の <strong>HTML Preview</strong> を押してください。以下の項目がすべて想定どおりなら正常に動作しています。</p>
+  </header>
+
+  <nav class="toc check">
+    <h2>確認項目</h2>
+    <ul>
+      <li><a href="#css">1. 相対パスの外部CSS</a></li>
+      <li><a href="#import">2. CSS の @import</a></li>
+      <li><a href="#bg">3. CSS の url() 背景画像</a></li>
+      <li><a href="#img">4. img タグの相対パス画像</a></li>
+      <li><a href="#inline">5. インライン style 属性</a></li>
+      <li><a href="#js">6. JavaScript が実行されないこと</a></li>
+      <li><a href="#link">7. 別ページへの相対リンク</a></li>
+    </ul>
+  </nav>
+
+  <section class="check" id="css">
+    <h2>1. 相対パスの外部CSS</h2>
+    <p><code>styles/theme.css</code> を読み込んでいます。</p>
+    <p class="status ok">このページに枠線と余白がついていれば OK</p>
+  </section>
+
+  <section class="check" id="import">
+    <h2>2. CSS の @import</h2>
+    <p><code>theme.css</code> が <code>base.css</code> を <code>@import</code> しています。</p>
+    <p><span class="import-probe">@import 展開ずみ</span></p>
+    <p>この文字が緑の角丸バッジになっていれば OK。素の文字のままなら @import の展開に失敗しています。</p>
+  </section>
+
+  <section class="check" id="bg">
+    <h2>3. CSS の url() 背景画像</h2>
+    <p><code>base.css</code> ではなく <code>theme.css</code> から <code>url("../assets/texture.svg")</code> を参照しています。</p>
+    <p class="status ok">ページ全体の背景に薄いドット模様が出ていれば OK</p>
+  </section>
+
+  <section class="check" id="img">
+    <h2>4. img タグの相対パス画像</h2>
+    <figure>
+      <img src="assets/diagram.svg" alt="GitHub のページから拡張機能が CSS と画像を取得し、sandbox iframe にプレビューを表示する流れ">
+      <figcaption>図が表示されていれば OK。壊れた画像アイコンなら取得に失敗しています。</figcaption>
+    </figure>
+  </section>
+
+  <section class="check" id="inline">
+    <h2>5. インライン style 属性</h2>
+    <p class="inline-probe" style="background: #faf7ff; color: #6639ba; font-weight: 600;">
+      紫の破線枠 + 薄紫の背景になっていれば OK
+    </p>
+  </section>
+
+  <section class="check" id="js">
+    <h2>6. JavaScript が実行されないこと</h2>
+    <p>この拡張機能は HTML 内のスクリプトを実行しません。下のスクリプトが動くと表示が赤に変わります。</p>
+    <p id="js-check" class="status ok">JavaScript: 実行されていない（想定どおり）</p>
+    <script>
+      // 実行されてしまった場合だけ表示が変わる。プレビューでは常に「実行されていない」のままになる。
+      var probe = document.getElementById('js-check');
+      probe.textContent = 'JavaScript: 実行された（想定外）';
+      probe.className = 'status ng';
+    </script>
+  </section>
+
+  <section class="check" id="link">
+    <h2>7. 別ページへの相対リンク</h2>
+    <p>プレビュー内のリンクは、対応する GitHub のファイルページを別タブで開きます。</p>
+    <p><a href="日本語のファイル名.html">日本語のファイル名.html を開く</a></p>
+    <p>このリンク先では、読み込みに失敗したときの警告表示も確認できます。</p>
+  </section>
+
+  <footer>
+    元のページに戻るときはプレビュー左上の「Code に戻る」、または Esc キーを押してください。
+  </footer>
+
+</div>
+</body>
+</html>

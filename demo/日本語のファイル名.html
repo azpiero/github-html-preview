@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>日本語のファイル名 | GitHub HTML Preview</title>
+  <link rel="stylesheet" href="styles/theme.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <h1>日本語のファイル名でも読める</h1>
+    <p>このファイル自体の名前が <code>日本語のファイル名.html</code> です。ここが表示できていれば、URL エンコードされたファイル名の取得が動作しています。</p>
+  </header>
+
+  <section class="check">
+    <h2>8. 日本語ファイル名</h2>
+    <p class="status ok">このページが崩れずに表示されていれば OK</p>
+  </section>
+
+  <section class="check">
+    <h2>9. 読み込みに失敗したときの挙動</h2>
+    <p>以下は意図的に失敗させています。プレビュー上部に警告が出ますが、本文の表示は続行されます。</p>
+    <ul>
+      <li>存在しない画像への参照</li>
+      <li>同じリポジトリの外にある CSS への参照</li>
+    </ul>
+    <p><img src="assets/この画像は存在しない.png" alt="存在しない画像（警告が出るのが正常）" width="220"></p>
+    <p class="status ok">上部に「一部の装飾・画像を読み込めませんでした」と出ていれば OK</p>
+  </section>
+
+  <section class="check">
+    <h2>10. 戻るリンク</h2>
+    <p><a href="index.html">動作確認用ドキュメントに戻る</a></p>
+  </section>
+
+  <footer>
+    ここまで想定どおりなら、拡張機能は正しく動作しています。
+  </footer>
+
+</div>
+</body>
+</html>

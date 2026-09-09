@@ -1,0 +1,48 @@
+/* base.css — theme.css から @import 経由で読み込まれる。
+   この階層が適用されていれば @import の展開が動作している。 */
+
+:root {
+  --ink: #1f2328;
+  --muted: #59636e;
+  --line: #d1d9e0;
+  --accent: #0969da;
+  --ok-bg: #dafbe1;
+  --ok-ink: #1a7f37;
+  --ng-bg: #ffebe9;
+  --ng-ink: #cf222e;
+  --surface: #ffffff;
+  --radius: 10px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  line-height: 1.85;
+  font-size: 16px;
+}
+
+h1, h2, h3 { line-height: 1.4; letter-spacing: .01em; }
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .88em;
+  background: #f0f3f6;
+  border-radius: 5px;
+  padding: .15em .4em;
+}
+
+a { color: var(--accent); }
+
+/* @import が展開されたことを目視で確認するための印。 */
+.import-probe {
+  display: inline-block;
+  background: var(--ok-bg);
+  color: var(--ok-ink);
+  border-radius: 999px;
+  padding: .2em .9em;
+  font-weight: 600;
+  font-size: .9rem;
+}
